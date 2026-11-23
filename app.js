@@ -1,36 +1,46 @@
 
-// Load environment variables from the .env file
+// Load environment variables
 require('dotenv').config();
 
-// Import the required packages
+// Import required packages
 const express = require('express');
 const path = require('path');
 
-// Initialize the Express application
+// Import the database connection
+const connectDB = require('./config/database');
+
+// Initialize Express
 const app = express();
 
-// Set EJS as the application's view engine
+// Set EJS as the view engine
 app.set('view engine', 'ejs');
 
-// Set the location of the views folder
+// Set the views directory
 app.set('views', path.join(__dirname, 'views'));
 
 // Allow the application to receive form data
 app.use(express.urlencoded({ extended: true }));
 
-// Allow access to CSS, images and other static files
+// Serve static files such as CSS and images
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Display the TaskTrack homepage
+// Homepage route
 app.get('/', (req, res) => {
     res.render('home', {
         title: 'TaskTrack'
     });
 });
 
-// Start the server using the assigned port
-const PORT = process.env.PORT || 3000;
+// Start the application after connecting to MongoDB
+const startServer = async () => {
+    await connectDB();
 
-app.listen(PORT, () => {
-    console.log(`TaskTrack is running on port ${PORT}`);
-});
+    const PORT = process.env.PORT || 3000;
+
+    app.listen(PORT, () => {
+        console.log(`TaskTrack is running on port ${PORT}`);
+    });
+};
+
+// Run the application
+startServer();
