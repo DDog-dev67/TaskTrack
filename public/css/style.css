@@ -1,0 +1,11 @@
+/* General website styling */
+
+body {
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+    color: #243447;
+}
+
+h1 {
+    font-weight: 700;
+}
