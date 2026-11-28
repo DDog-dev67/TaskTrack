@@ -4,8 +4,307 @@ body {
     background-color: #f4f6f9;
     font-family: Arial, sans-serif;
     color: #243447;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-h1 {
+main {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+
+.tasktrack-navbar {
+    background-color: #172d46;
+    padding: 16px 0;
+}
+
+.navbar-brand {
+    font-size: 23px;
+    letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+    color: #e2e8f0;
+    margin-left: 18px;
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #8fc5ff;
+}
+
+/* Buttons */
+
+.btn-primary {
+    background-color: #245b91;
+    border-color: #245b91;
+}
+
+.btn-primary:hover {
+    background-color: #193f67;
+    border-color: #193f67;
+}
+
+/* Homepage Hero Section */
+
+.hero-section {
+    background-color: #ffffff;
+    padding: 90px 0;
+}
+
+.hero-label {
+    color: #245b91;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.hero-title {
+    color: #172d46;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.hero-description {
+    color: #64748b;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.hero-card {
+    background-color: #f4f6f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.productivity-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.productivity-item i {
+    color: #245b91;
+    font-size: 25px;
+    width: 35px;
+}
+
+.productivity-item h6 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.productivity-item p {
+    color: #64748b;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* Homepage Features */
+
+.features-section {
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+
+.section-title {
+    color: #172d46;
+    font-weight: bold;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    padding: 35px 25px;
+    border-radius: 10px;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 32px;
+    color: #245b91;
+    margin-bottom: 20px;
+}
+
+.feature-card h5 {
+    font-weight: bold;
+    color: #172d46;
+}
+
+.feature-card p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Assignment Pages */
+
+.page-section {
+    padding-top: 55px;
+    padding-bottom: 30px;
+}
+
+.page-title {
+    color: #172d46;
     font-weight: 700;
+}
+
+.directory-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.table thead th {
+    background-color: #172d46;
+    color: #ffffff;
+    padding: 16px;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 18px 16px;
+}
+
+.table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Assignment Status Badges */
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.completed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.in-progress {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.not-started {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+/* Empty Assignment Directory */
+
+.empty-state i {
+    font-size: 50px;
+    color: #94a3b8;
+}
+
+/* Forms */
+
+.form-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-control,
+.form-select {
+    padding: 11px;
+    border-color: #cbd5e1;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #245b91;
+    box-shadow: 0 0 0 0.2rem rgba(36, 91, 145, 0.15);
+}
+
+/* Delete Confirmation */
+
+.confirmation-container {
+    max-width: 650px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 45px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.delete-icon {
+    font-size: 55px;
+    color: #dc3545;
+}
+
+.assignment-preview {
+    background-color: #f4f6f9;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Footer */
+
+.tasktrack-footer {
+    background-color: #172d46;
+    color: #ffffff;
+}
+
+.tasktrack-footer p {
+    color: #cbd5e1;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding: 55px 0;
+    }
+
+    .hero-title {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .form-container {
+        padding: 25px 18px;
+    }
+
+    .confirmation-container {
+        padding: 30px 20px;
+    }
+
+    .features-section {
+        padding-top: 45px;
+    }
 }
